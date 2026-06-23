@@ -1,0 +1,147 @@
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+.modal-box {
+    background: #fff;
+    border-radius: 16px;
+    padding: 32px;
+    width: 100%;
+    max-width: 420px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+    animation: popIn 0.25s ease;
+    text-align: center;
+}
+
+.modal-large {
+    max-width: 640px;
+    text-align: left;
+}
+
+@keyframes popIn {
+    from { opacity: 0; transform: scale(0.92); }
+    to   { opacity: 1; transform: scale(1); }
+}
+
+.modal-icon {
+    font-size: 40px;
+    margin-bottom: 12px;
+}
+
+.modal-box h3 {
+    margin: 0 0 8px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #111;
+}
+
+.modal-box p {
+    color: #555;
+    font-size: 14px;
+    margin-bottom: 24px;
+}
+
+.modal-subtitle {
+    font-size: 13px;
+    color: #777;
+    margin-bottom: 20px !important;
+}
+
+.modal-subtitle strong {
+    color: #333;
+}
+
+.modal-actions {
+    display: flex;
+    gap: 12px;
+    justify-content: flex-end;
+    margin-top: 24px;
+}
+
+.btn-annuler {
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    background: #fff;
+    color: #555;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.2s;
+}
+
+.btn-annuler:hover { background: #f5f5f5; }
+
+.btn-confirmer {
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: none;
+    background: #ef4444;
+    color: #fff;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    transition: background 0.2s;
+}
+
+.btn-confirmer:hover { background: #dc2626; }
+
+.btn-sauvegarder {
+    padding: 10px 24px;
+    border-radius: 8px;
+    border: none;
+    background: #3b82f6;
+    color: #fff;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    transition: background 0.2s;
+}
+
+.btn-sauvegarder:hover { background: #2563eb; }
+
+/* Formulaire dans le modal */
+.modal-form .modal-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+}
+
+.modal-field {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.modal-field label {
+    font-size: 12px;
+    font-weight: 600;
+    color: #555;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+}
+
+.modal-field input {
+    padding: 9px 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #111;
+    outline: none;
+    transition: border 0.2s;
+}
+
+.modal-field input:focus {
+    border-color: #3b82f6;
+}

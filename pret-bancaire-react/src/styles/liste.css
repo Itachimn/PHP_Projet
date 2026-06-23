@@ -1,0 +1,287 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Segoe UI",sans-serif;
+}
+
+.liste-container{
+
+    min-height:calc(100vh - 80px);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:flex-start;
+
+    padding:50px;
+
+    background:
+    radial-gradient(circle at top left,#2c2c2c,transparent 40%),
+    radial-gradient(circle at bottom right,#001d5c,transparent 40%),
+    #111827;
+
+}
+
+.liste-card{
+
+    width:100%;
+
+    max-width:1200px;
+
+    background:#f2f1ed;
+
+    border-radius:8px;
+
+    padding:40px;
+
+    box-shadow:0 20px 40px rgba(0,0,0,.25);
+
+}
+
+.liste-card h1{
+
+    color:#182750;
+
+    margin-bottom:10px;
+
+}
+
+.liste-card p{
+
+    color:#6d7b8e;
+
+    margin-top:20px;
+
+    margin-bottom:25px;
+
+}
+
+.recherche{
+
+    width:100%;
+
+    height:55px;
+
+    border:1px solid #ccc;
+
+    border-radius:6px;
+
+    padding:15px;
+
+    margin-bottom:30px;
+
+    font-size:16px;
+
+}
+
+.recherche:focus{
+
+    outline:none;
+
+    border:2px solid #d6a84f;
+
+}
+
+table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+}
+
+thead{
+
+    background:#182750;
+
+    color:white;
+
+}
+
+th{
+
+    padding:18px;
+
+}
+
+td{
+
+    padding:18px;
+
+    text-align:center;
+
+    color: black;
+
+}
+
+tbody tr{
+
+    border-bottom:1px solid #ddd;
+
+}
+
+tbody tr:nth-child(even){
+
+    background:#fafafa;
+
+}
+
+tbody tr:hover{
+
+    background:#ececec;
+
+}
+
+.btn-edit{
+
+    background:#182750;
+
+    color:white;
+
+    border:none;
+
+    width: auto;
+    min-width: 80px;
+
+    margin: 0 4px;
+    
+    font-weight: 600;
+
+    padding:8px 14px;
+
+    border-radius:15px;
+
+    margin-right:5px;
+
+    cursor:pointer;
+    width: 20px;
+    height: 30px;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.15s, transform 0.1s;
+    flex-shrink: 0;
+
+}
+
+.btn-delete{
+
+
+    background:#d9534f;
+
+    color:white;
+
+    border:none;
+
+    width: auto;
+
+    min-width: 80px;
+
+    margin: 0 4px;
+
+    font-weight: 600;
+
+    padding:8px 14px;
+
+    border-radius:15px;
+
+    cursor:pointer;
+    width: 20px;
+    height: 30px;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.15s, transform 0.1s;
+    flex-shrink: 0;
+
+}
+
+.btn-edit:hover{
+
+    background:#223566;
+
+}
+
+.btn-delete:hover{
+
+    background:#b52b27;
+
+}
+
+/*===============*/
+
+/* Wrapper pour le scroll horizontal sur petits écrans */
+.table-wrapper {
+    overflow-x: auto;
+    margin-top: 16px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px; /* réduit depuis 14-16px */
+    white-space: nowrap;
+}
+
+th {
+    padding: 10px 12px;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #888;
+    border-bottom: 1px solid #eee;
+    text-align: left;
+}
+
+td {
+    padding: 10px 12px;
+    border-bottom: 1px solid #f3f3f3;
+    color: #333;
+}
+
+/* Colonnes à largeur contrainte */
+.td-compte  { font-family: monospace; font-size: 12px; color: #666; }
+.td-taux    { text-align: center; }
+.td-montant { text-align: right; font-variant-numeric: tabular-nums; }
+.td-date    { font-size: 12px; color: #888; }
+
+/* Boutons icône compacts */
+.td-actions {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+}
+/*
+.btn-edit,
+.btn-delete {
+    width: 20px;
+    height: 20px;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.15s, transform 0.1s;
+    flex-shrink: 0;
+}
+
+.btn-edit   { background: #eff6ff; }
+.btn-delete { background: #fef2f2; }
+
+.btn-edit:hover   { background: #dbeafe; transform: scale(1.08); }
+.btn-delete:hover { background: #fee2e2; transform: scale(1.08); }
+
+*/

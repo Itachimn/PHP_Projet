@@ -1,0 +1,243 @@
+*{
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Segoe UI",sans-serif;
+
+}
+
+body{
+
+    background:#111827;
+
+}
+
+/****************************/
+
+.login-container{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:
+    radial-gradient(circle at top left,#2c2c2c,transparent 40%),
+    radial-gradient(circle at bottom right,#001d5c,transparent 40%),
+    #111827;
+
+}
+
+/****************************/
+
+.login-card{
+
+    width:1000px;
+
+    max-width:90%;
+
+    height:550px;
+
+    display:flex;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    box-shadow:0 20px 60px rgba(0,0,0,.45);
+
+}
+
+/****************************/
+
+.left{
+
+    width:52%;
+
+    background:#182750;
+
+    color:white;
+
+    padding:70px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+}
+
+.logo{
+
+    width:80px;
+
+    height:80px;
+
+    border-radius:50%;
+
+    border:2px solid #d6a84f;
+
+    color:#f5c85a;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:34px;
+
+    font-weight:bold;
+
+    margin-bottom:60px;
+
+    font-family:Georgia,serif;
+
+}
+
+.left h1{
+
+    font-size:66px;
+
+    font-family:Georgia,serif;
+
+    margin-bottom:15px;
+
+}
+
+.left p{
+
+    font-size:28px;
+
+    color:#c7c7c7;
+
+}
+
+/****************************/
+
+.right{
+
+    width:48%;
+
+    background:#f2f1ed;
+
+    padding:70px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+}
+
+.right h2{
+
+    font-size:54px;
+
+    margin-bottom:60px;
+
+    color:#182750;
+
+    font-family:Georgia,serif;
+
+}
+
+label{
+
+    display:block;
+
+    margin-bottom:12px;
+
+    margin-top:20px;
+
+    text-transform:uppercase;
+
+    letter-spacing:2px;
+
+    color:#6d7b8e;
+
+    font-size:17px;
+
+}
+
+input{
+
+    width:100%;
+
+    height:68px;
+
+    border:1px solid #060606;
+
+    border-radius:10px;
+
+    padding:18px;
+
+    font-size:18px;
+
+    background:white ;
+    color: #060606;
+
+}
+
+input:focus{
+
+    outline:none;
+
+    border:2px solid #d6a84f;
+
+}
+
+button{
+
+    margin-top:55px;
+
+    width:100%;
+
+    height:68px;
+
+    border:none;
+
+    background:#6d7485;
+
+    color:white;
+
+    font-size:28px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+button:hover{
+
+    background:#182750;
+
+}
+.message-login {
+    margin-top: 12px;
+    padding: 10px 14px;
+    border-radius: 8px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.message-login.succes {
+    background-color: #d1fae5;
+    color: #065f46;
+    border: 1px solid #6ee7b7;
+}
+
+.message-login.erreur {
+    background-color: #fee2e2;
+    color: #991b1b;
+    border: 1px solid #fca5a5;
+}
