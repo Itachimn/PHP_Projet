@@ -21,6 +21,16 @@ function Ajout() {
 
         try {
 
+            if (parseFloat(montant) <= 0) {
+        setToast({ texte: "Le montant doit être supérieur à 0.", type: "erreur" });
+        return;
+    }
+
+    if (parseFloat(taux) < 0 || parseFloat(taux) > 1) {
+        setToast({ texte: "Le taux doit être compris entre 0 et 1 (ex: 0.05 pour 5%).", type: "erreur" });
+        return;
+    }
+
             const response = await fetch("http://localhost:8000/api/prets.php", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
@@ -113,6 +123,7 @@ function Ajout() {
                                 <input
                                     type="number"
                                     placeholder="Montant"
+                                    min="0"
                                     value={montant}
                                     onChange={(e) => setMontant(e.target.value)}
                                 />
@@ -124,6 +135,8 @@ function Ajout() {
                                     type="number"
                                     step="0.01"
                                     placeholder="Taux (ex: 0.05 pour 5%)"
+                                    min="0"
+                                    max="1"
                                     value={taux}
                                     onChange={(e) => setTaux(e.target.value)}
                                 />

@@ -17,6 +17,17 @@ function ModalModifier({ pret, onSauvegarder, onAnnuler }) {
 
     function handleSubmit(e) {
         e.preventDefault();
+
+        if (parseFloat(form.montant) <= 0) {
+        alert("Le montant doit être supérieur à 0.");
+        return;
+    }
+
+    if (parseFloat(form.taux_de_pret) < 0 || parseFloat(form.taux_de_pret) > 1) {
+        alert("Le taux doit être compris entre 0 et 1 (ex: 0.05 pour 5%).");
+        return;
+    }
+
         onSauvegarder(form);
     }
 
@@ -64,6 +75,7 @@ function ModalModifier({ pret, onSauvegarder, onAnnuler }) {
                             <input
                                 type="number"
                                 name="montant"
+                                 min="0"
                                 value={form.montant}
                                 onChange={handleChange}
                             />
@@ -75,6 +87,8 @@ function ModalModifier({ pret, onSauvegarder, onAnnuler }) {
                                 type="number"
                                 step="0.01"
                                 name="taux_de_pret"
+                                 min="0"
+                                 max="1"
                                 value={form.taux_de_pret}
                                 onChange={handleChange}
                             />

@@ -1,168 +1,215 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:"Segoe UI",sans-serif;
+.bilan-container {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 24px;
 }
 
-.bilan-container{
+.bilan-header {
+    width:100%;
 
-    min-height:calc(100vh - 80px);
+    margin-bottom: 25px;
 
-    padding:50px;
+    max-width:1200px;
 
-    background:
-    radial-gradient(circle at top left,#2c2c2c,transparent 40%),
-    radial-gradient(circle at bottom right,#001d5c,transparent 40%),
-    #111827;
+    background:#f2f1ed;
 
-}
+    border-radius:8px;
 
-.bilan-container h1{
+    padding:40px;
 
-    color:white;
-
-    text-align:center;
-
-    margin-bottom:40px;
-
-    font-size:40px;
+    box-shadow:0 20px 40px rgba(0,0,0,.25);
 
 }
 
-.cards{
+.bilan-header h1 {
+     color:#182750;
 
+    margin-bottom:10px;
+}
+
+.bilan-header p {
+     color:#6d7b8e;
+
+    margin-top:20px;
+
+    margin-bottom:25px;
+
+}
+
+/* Cartes */
+.bilan-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    margin-bottom: 20px;
+    animation: fadeUp 0.4s ease both;
+}
+
+.bilan-card {
+    background: #f8f8f8;
+    border-radius: 12px;
+    padding: 16px 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+    cursor: default;
+}
+/*.bilan-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.10);
+    background: #ffffff;
+    border: 1px solid #e8e8e8;
+}*/
+
+.bilan-card-label {
+    font-size: 12px;
+    color: #888;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
    
-
-    display:grid;
-
-    grid-template-columns:repeat(2,1fr);
-
-    gap:30px;
-
-    max-width:1100px;
-
-    margin:auto;
-
 }
 
-.card{
-
-    background:#f2f1ed;
-
-    border-radius:10px;
-
-    padding:35px;
-
-    box-shadow:0 15px 30px rgba(0,0,0,.3);
-
-    transition:.3s;
-
+.bilan-card-value {
+    font-size: 20px;
+    font-weight: 600;
+    color: #111;
+    line-height: 1.2;
 }
 
-.card:hover{
-
-    transform:translateY(-5px);
-
+.bilan-card-value small {
+    font-size: 13px;
+    font-weight: 400;
+    color: #888;
 }
 
-.card h2{
+.bilan-card-min { color: #0f6e56; }
+.bilan-card-max { color: #185fa5; }
 
-    color:#182750;
-
-    margin-bottom:20px;
-
-}
-
-.card span{
-
-    font-size:38px;
-
-    font-weight:bold;
-
-    color:#d6a84f;
-
-}
-
-.graph{
-
-    margin:60px auto;
-
-    max-width:1100px;
-
-    background:#f2f1ed;
-
-    padding:35px;
-
-    border-radius:10px;
-
-    box-shadow:0 15px 30px rgba(0,0,0,.3);
-
-}
-
-.graph h2{
-
-    color:#182750;
-
-    margin-bottom:20px;
-
-}
-
-.graph-placeholder{
-
-    height:320px;
-
-    border:3px dashed #d6a84f;
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    color:#6d7b8e;
-
-    font-size:20px;
-
-}
-.graphiques {
+/* Graphiques */
+.bilan-graphiques {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 24px;
-    margin-top: 32px;
+    gap: 16px;
+     animation: fadeUp 0.5s ease 0.1s both;
 }
 
-.graph {
+.bilan-graph-card {
     background: #fff;
-    border-radius: 16px;
-    padding: 24px;
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+    border: 1px solid #f0f0f0;
+    border-radius: 14px;
+    padding: 20px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.bilan-graph-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.08);
 }
 
-.graph h2 {
-    font-size: 15px;
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(16px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Délai progressif sur chaque carte */
+.bilan-card:nth-child(1) { animation: fadeUp 0.4s ease 0.05s both; }
+.bilan-card:nth-child(2) { animation: fadeUp 0.4s ease 0.10s both; }
+.bilan-card:nth-child(3) { animation: fadeUp 0.4s ease 0.15s both; }
+.bilan-card:nth-child(4) { animation: fadeUp 0.4s ease 0.20s both; }
+
+.bilan-graph-card h2 {
+    font-size: 14px;
     font-weight: 600;
     color: #333;
-    margin-bottom: 20px;
+    margin: 0 0 16px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
-.bilan-info {
-    text-align: center;
-    color: #888;
-    margin-top: 60px;
-    font-size: 15px;
+/* Barres */
+.bilan-bar-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
 }
 
-.bilan-erreur {
-    text-align: center;
-    color: #ef4444;
-    margin-top: 60px;
-    font-size: 15px;
+.bilan-bar-label {
+    font-size: 12px;
+    color: #666;
+    width: 100px;
+    flex-shrink: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
-/* Responsive : empile les graphiques sur petit écran */
+.bilan-bar-track {
+    flex: 1;
+    background: #f3f3f3;
+    border-radius: 6px;
+    height: 26px;
+    overflow: hidden;
+}
+
+.bilan-bar-fill {
+    height: 100%;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    min-width: 60px;
+    transition: width 0.6s ease;
+}
+
+.bilan-bar-fill span {
+    font-size: 11px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.bilan-bar-blue  { background: #dbeafe; }
+.bilan-bar-blue span  { color: #1e40af; }
+
+.bilan-bar-green { background: #d1fae5; }
+.bilan-bar-green span { color: #065f46; }
+
+.bilan-bar-amber { background: #fef3c7; }
+.bilan-bar-amber span { color: #92400e; }
+
+/* Messages */
+.bilan-info   { text-align: center; color: #888; margin-top: 60px; }
+.bilan-erreur { text-align: center; color: #ef4444; margin-top: 60px; }
+
+/* Responsive */
 @media (max-width: 768px) {
-    .graphiques {
-        grid-template-columns: 1fr;
-    }
+    .bilan-cards      { grid-template-columns: 1fr 1fr; }
+    .bilan-graphiques { grid-template-columns: 1fr; }
+}
+.bilan-tooltip {
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: 10px 14px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.bilan-tooltip-label {
+    font-size: 12px;
+    color: #888;
+    margin: 0 0 4px;
+}
+
+.bilan-tooltip-value {
+    font-size: 14px;
+    font-weight: 600;
+    color: #111;
+    margin: 0;
 }
